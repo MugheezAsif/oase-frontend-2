@@ -14,73 +14,143 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- <div class="container d-flex align-items-end justify-content-center" style="min-height: 100vh;"> -->
-        <div class="main">
-            <div class="d-flex max-height justify-content-between">
-                <div class="left">
-                    <div class="menu py-5 ps-3 max-height d-flex flex-column align-items-center justify-content-between">
-                        <div class="top my-uto">
-                            <div class="logo">
+
+    <div class="main">
+        <div class="d-none d-md-flex max-height justify-content-between">
+            <div class="left">
+                <div class="menu py-2 py-md-3 py-lg-5 ps-3 max-height d-flex flex-column 
+                    align-items-center justify-content-between">
+                    <div class="top">
+                        <div class="logo">
+                            <a href="/">
                                 <img src="images/main-logo.png" class="img img-fluid" alt="main-logo">
-                            </div>
+                            </a>
                         </div>
-                        <div class="menu-items my-auto">
-                            <div class="items">
-                                <div class="item">
-                                    <a class="active" href="">Dashboard</a>
-                                </div>
-                                <div class="item">
-                                    <a href="">Customize</a>
-                                </div>
-                                <div class="item">
-                                    <a href="">Analyticts</a>
-                                </div>
-                                <div class="item">
-                                    <a href="">Account</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bottom my-uto">
+                    </div>
+                    <div class="menu-items my-auto">
+                        <div class="items">
                             <div class="item">
-                                <a class="text-nowrap" href="">Short your URL</a>
+                                <a class="active" href="">Dashboard</a>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="center mt-auto">
-                    <div class="container p-0">
-                        <div class="main-image">
-                            <img src="images/icons/hand-phone.png" class="img img-fluid" alt="hand-phone">
-                        </div>
-                    </div>
-                </div>
-                <div class="right py-5 pe-3 d-flex max-height flex-column justify-content-between">
-                    <div class="top ms-auto">
-                        <div class="icon">
-                            <img src="images/icons/user-icon.png" class="img img-fluid" alt="user-icon">
+                            <div class="item">
+                                <a href="">Customize</a>
+                            </div>
+                            <div class="item">
+                                <a href="">Analyticts</a>
+                            </div>
+                            <div class="item">
+                                <a href="">Account</a>
+                            </div>
                         </div>
                     </div>
                     <div class="bottom">
-                        <div class="items">
-                            <div class="item">
-                                <a class="active text-nowrap" href="">Share Link</a>
-                            </div>
-                            <div class="item">
-                                <a class="active text-nowrap" href="">See Subscribers</a>
-                            </div>
-                            <div class="item">
-                                <a class="active  text-nowrap" href="">Connect Domain</a>
-                            </div>
+                        <div class="item">
+                            <a class="text-nowrap" href="">Short your URL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center mt-auto">
+                <div class="container p-0">
+                    <div class="main-image">
+                        <img src="images/icons/hand-phone.png" class="img img-fluid" alt="hand-phone">
+                    </div>
+                </div>
+            </div>
+            <div class="right py-2 py-md-3 py-lg-5 pe-3 d-flex max-height flex-column justify-content-between">
+                <div class="top ms-auto">
+                    <div class="icon">
+                        <div class="dropdown">
+                            <img src="images/icons/user-icon.png" id="menu1" data-bs-toggle="dropdown"
+                                class="img img-fluid dropdown-toggle" alt="user-icon">
+                            <ul class="dropdown-menu" aria-labelledby="menu1">
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="items">
+                        <div class="item">
+                            <a class="active text-nowrap" href="">Share Link</a>
+                        </div>
+                        <div class="item">
+                            <a class="active text-nowrap" href="">See Subscribers</a>
+                        </div>
+                        <div class="item">
+                            <a class="active  text-nowrap" href="">Connect Domain</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    <!-- </div> -->
+        <div class="d-flex d-md-none max-height flex-column">
+            <div class="content">
+                <div class="top my-4 text-center px-2">
+                    <a href="/">
+                        <div class="logo">
+                            <img src="images/main-logo.png" class="img img-fluid" alt="main-logo">
+                        </div>
+                    </a>
+                </div>
+                <div class="menu d-flex  text-center px-2 my-2 justify-content-between align-items-center">
+                    <div class="icon">
+                        <img src="images/icons/menu-icon.png" class="img img-fluid menuMobileBtn" alt="menu-icon">
+                    </div>
+                    <div class="icon">
+                        <div class="dropdown">
+                            <img src="images/icons/user-icon.png" role="button" id="menu2" data-bs-toggle="dropdown"
+                                class="img img-fluid dropdown-toggle" alt="user-icon">
+                            <ul class="dropdown-menu" aria-labelledby="menu2">
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="center mt-auto mx-auto">
+                <div class="container p-0">
+                    <div class="main-image">
+                        <img src="images/icons/hand-phone.png" class="img img-fluid" alt="hand-phone">
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu">
+                <div class="menu-items my-auto">
+                    <div class="items">
+                        <div class="item">
+                            <a class="active" href="">Dashboard</a>
+                        </div>
+                        <div class="item">
+                            <a href="">Customize</a>
+                        </div>
+                        <div class="item">
+                            <a href="">Analyticts</a>
+                        </div>
+                        <div class="item">
+                            <a href="">Account</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
 
 </body>
+
+    <script>
+        $(function () {
+            $('.menuMobileBtn').on('click', function () {
+                $('.mobile-menu').toggleClass('active');
+            });
+        });
+    </script>
 
 </html>

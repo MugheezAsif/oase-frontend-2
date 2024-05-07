@@ -1,0 +1,55 @@
+body {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #1C1B1B;
+    font-optical-sizing: auto;
+    height: 100vh;
+}
+
+.main {
+    max-height: 800px;
+    overflow: hidden;
+}
+
+.main .max-height {
+    height: 800px;
+}
+
+.main .left .bottom .item a {
+    color: #fff;
+    font-size: 1.4rem;
+    background-color: #FB71FC;
+    text-decoration: none;
+    padding: 1rem 2.2rem;
+    border-radius: 2.5rem;
+}
+
+.main .items .item {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+}
+
+.main .items a {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #fff;
+    background-color: transparent;
+    padding: 1rem 2.2rem;
+    border-radius: 2.5rem;
+}
+
+.main .items a.active {
+    background-color: #706EFF;
+}
+
+.main .center .main-image img {
+    min-height: 55vh;
+}
+
+.main .left .menu .logo img {
+    max-width: 16rem;
+}
+
+.main .right .top img {
+    max-height: 4rem;
+}
